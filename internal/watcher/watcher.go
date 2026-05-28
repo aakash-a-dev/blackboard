@@ -2,7 +2,7 @@ package watcher
 
 import (
 	"github.com/fsnotify/fsnotify"
-	"github.com/aakash-a-dev/blackboard/blackboard-cli/internal/logger"
+	"github.com/aakash-a-dev/blackboard/internal/logger"
 )
 
 // Watch calls onChange whenever the file at path is written.

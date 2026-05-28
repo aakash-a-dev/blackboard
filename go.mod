@@ -1,4 +1,4 @@
-module github.com/aakash-a-dev/blackboard/blackboard-cli
+module github.com/aakash-a-dev/blackboard
 
 go 1.22
 

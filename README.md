@@ -20,7 +20,7 @@ irm https://raw.githubusercontent.com/aakash-a-dev/blackboard/main/blackboard-cl
 
 **Go toolchain** (any OS):
 ```bash
-go install github.com/aakash-a-dev/blackboard/blackboard-cli@latest
+go install github.com/aakash-a-dev/blackboard@latest
 ```
 
 **Manual** — download a pre-built binary from [GitHub Releases](https://github.com/aakash-a-dev/blackboard/releases) and place it anywhere in your `PATH`.

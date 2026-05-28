@@ -5,9 +5,9 @@ import (
 	"strings"
 	"sync/atomic"
 
-	"github.com/aakash-a-dev/blackboard/blackboard-cli/internal/config"
-	"github.com/aakash-a-dev/blackboard/blackboard-cli/internal/handler"
-	"github.com/aakash-a-dev/blackboard/blackboard-cli/internal/logger"
+	"github.com/aakash-a-dev/blackboard/internal/config"
+	"github.com/aakash-a-dev/blackboard/internal/handler"
+	"github.com/aakash-a-dev/blackboard/internal/logger"
 )
 
 // Server wraps an atomically-swappable HTTP handler for hot-reload.

@@ -10,9 +10,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/aakash-a-dev/blackboard/blackboard-cli/internal/config"
-	"github.com/aakash-a-dev/blackboard/blackboard-cli/internal/faker"
-	"github.com/aakash-a-dev/blackboard/blackboard-cli/internal/logger"
+	"github.com/aakash-a-dev/blackboard/internal/config"
+	"github.com/aakash-a-dev/blackboard/internal/faker"
+	"github.com/aakash-a-dev/blackboard/internal/logger"
 )
 
 // Build returns an http.Handler for a single endpoint.

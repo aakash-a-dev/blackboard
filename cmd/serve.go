@@ -6,10 +6,10 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/aakash-a-dev/blackboard/blackboard-cli/internal/config"
-	"github.com/aakash-a-dev/blackboard/blackboard-cli/internal/logger"
-	"github.com/aakash-a-dev/blackboard/blackboard-cli/internal/server"
-	"github.com/aakash-a-dev/blackboard/blackboard-cli/internal/watcher"
+	"github.com/aakash-a-dev/blackboard/internal/config"
+	"github.com/aakash-a-dev/blackboard/internal/logger"
+	"github.com/aakash-a-dev/blackboard/internal/server"
+	"github.com/aakash-a-dev/blackboard/internal/watcher"
 	"github.com/spf13/cobra"
 )
 

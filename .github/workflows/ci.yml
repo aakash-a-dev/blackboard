@@ -12,9 +12,6 @@ jobs:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
     runs-on: ${{ matrix.os }}
-    defaults:
-      run:
-        working-directory: blackboard-cli
 
     steps:
       - uses: actions/checkout@v4
@@ -25,7 +22,7 @@ jobs:
           cache: true
 
       - name: Build
-        run: go build -o mockapi ./...
+        run: go build -o mockapi .
 
       - name: Vet
         run: go vet ./...

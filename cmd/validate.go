@@ -3,8 +3,8 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/aakash-a-dev/blackboard/blackboard-cli/internal/config"
-	"github.com/aakash-a-dev/blackboard/blackboard-cli/internal/logger"
+	"github.com/aakash-a-dev/blackboard/internal/config"
+	"github.com/aakash-a-dev/blackboard/internal/logger"
 	"github.com/spf13/cobra"
 )
 
