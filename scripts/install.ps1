@@ -1,14 +1,14 @@
-# Install mockapi on Windows — downloads the latest release binary and adds it to PATH.
-# Usage: irm https://raw.githubusercontent.com/aakash-a-dev/blackboard/main/blackboard-cli/scripts/install.ps1 | iex
+# Install blackboard on Windows — downloads the latest release binary and adds it to PATH.
+# Usage: irm https://raw.githubusercontent.com/aakash-a-dev/blackboard/main/scripts/install.ps1 | iex
 
 $ErrorActionPreference = "Stop"
 
-$Repo    = "aakash-a-dev/blackboard"
-$Binary  = "mockapi.exe"
-$InstallDir = "$env:LOCALAPPDATA\mockapi"
+$Repo       = "aakash-a-dev/blackboard"
+$Binary     = "blackboard.exe"
+$InstallDir = "$env:LOCALAPPDATA\blackboard"
 
 # ── fetch latest version ────────────────────────────────────────────────────
-Write-Host "Fetching latest mockapi release..."
+Write-Host "Fetching latest blackboard release..."
 $release = Invoke-RestMethod "https://api.github.com/repos/$Repo/releases/latest"
 $version = $release.tag_name
 
@@ -17,12 +17,12 @@ if (-not $version) {
   exit 1
 }
 
-Write-Host "Installing mockapi $version (windows/amd64)..."
+Write-Host "Installing blackboard $version (windows/amd64)..."
 
 # ── download ────────────────────────────────────────────────────────────────
-$archive = "mockapi_${version}_windows_amd64.zip"
+$archive = "blackboard_${version}_windows_amd64.zip"
 $url     = "https://github.com/$Repo/releases/download/$version/$archive"
-$tmp     = Join-Path $env:TEMP "mockapi-install"
+$tmp     = Join-Path $env:TEMP "blackboard-install"
 
 New-Item -ItemType Directory -Force $tmp | Out-Null
 $zipPath = Join-Path $tmp $archive
@@ -48,5 +48,5 @@ if ($userPath -notlike "*$InstallDir*") {
 Remove-Item $tmp -Recurse -Force
 
 Write-Host ""
-Write-Host "  mockapi $version installed → $InstallDir\$Binary"
-Write-Host "  Run: mockapi init"
+Write-Host "  blackboard $version installed → $InstallDir\$Binary"
+Write-Host "  Run: blackboard init"

@@ -7,11 +7,11 @@ import (
 )
 
 var root = &cobra.Command{
-	Use:   "mockapi",
+	Use:   "blackboard",
 	Short: "Spin up a mock HTTP server from a YAML file",
-	Long: `mockapi — zero-boilerplate mock API server.
+	Long: `blackboard — zero-boilerplate mock API server.
 
-Write a YAML file, run mockapi serve, get a live server.
+Write a YAML file, run blackboard serve, get a live server.
 No code, no account, no runtime required.
 
 Documentation: https://github.com/aakash-a-dev/blackboard`,

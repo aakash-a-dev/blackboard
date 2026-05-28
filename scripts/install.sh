@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# Install mockapi — detects OS/arch, downloads the right binary, places it in /usr/local/bin.
-# Usage: curl -sSL https://raw.githubusercontent.com/aakash-a-dev/blackboard/main/blackboard-cli/scripts/install.sh | bash
+# Install blackboard — detects OS/arch, downloads the right binary, places it in /usr/local/bin.
+# Usage: curl -sSL https://raw.githubusercontent.com/aakash-a-dev/blackboard/main/scripts/install.sh | bash
 
 set -euo pipefail
 
 REPO="aakash-a-dev/blackboard"
-BINARY="mockapi"
+BINARY="blackboard"
 INSTALL_DIR="/usr/local/bin"
 
 # ── detect OS ──────────────────────────────────────────────────────────────
@@ -31,7 +31,7 @@ case "$ARCH" in
 esac
 
 # ── fetch latest version tag ───────────────────────────────────────────────
-echo "Fetching latest mockapi release..."
+echo "Fetching latest blackboard release..."
 VERSION="$(curl -sSf "https://api.github.com/repos/${REPO}/releases/latest" \
   | grep '"tag_name"' | sed -E 's/.*"([^"]+)".*/\1/')"
 
@@ -40,7 +40,7 @@ if [[ -z "$VERSION" ]]; then
   exit 1
 fi
 
-echo "Installing mockapi ${VERSION} (${OS}/${ARCH})..."
+echo "Installing blackboard ${VERSION} (${OS}/${ARCH})..."
 
 # ── download & extract ─────────────────────────────────────────────────────
 TMP="$(mktemp -d)"
@@ -62,5 +62,5 @@ fi
 chmod +x "$INSTALL_DIR/$BINARY"
 
 echo ""
-echo "  mockapi ${VERSION} installed → $INSTALL_DIR/$BINARY"
-echo "  Run: mockapi init"
+echo "  blackboard ${VERSION} installed → $INSTALL_DIR/$BINARY"
+echo "  Run: blackboard init"

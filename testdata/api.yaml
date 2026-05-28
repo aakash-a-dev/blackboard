@@ -1,4 +1,4 @@
-# mockapi — golden fixture for integration tests
+# blackboard — golden fixture for integration tests
 version: "1"
 info:
   title: Test API

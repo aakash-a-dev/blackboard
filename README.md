@@ -1,9 +1,9 @@
-# mockapi
+# blackboard
 
 Spin up a live mock HTTP server from a YAML file. No code, no account, no runtime.
 
 ```bash
-mockapi serve api.yaml
+blackboard serve api.yaml
 ```
 
 ## Install
@@ -28,17 +28,17 @@ go install github.com/aakash-a-dev/blackboard@latest
 ## Quickstart
 
 ```bash
-mockapi init          # scaffold api.yaml in the current directory
-mockapi serve api.yaml
+blackboard init          # scaffold api.yaml in the current directory
+blackboard serve api.yaml
 ```
 
 ## Commands
 
 | Command | Description |
 |---|---|
-| `mockapi serve <file>` | Start the mock server |
-| `mockapi validate <file>` | Validate YAML, exit |
-| `mockapi init` | Scaffold a starter api.yaml |
+| `blackboard serve <file>` | Start the mock server |
+| `blackboard validate <file>` | Validate YAML, exit |
+| `blackboard init` | Scaffold a starter api.yaml |
 
 ## `serve` flags
 

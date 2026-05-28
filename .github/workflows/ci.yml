@@ -22,7 +22,7 @@ jobs:
           cache: true
 
       - name: Build
-        run: go build -o mockapi .
+        run: go build -o blackboard .
 
       - name: Vet
         run: go vet ./...

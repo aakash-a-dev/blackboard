@@ -14,8 +14,8 @@ var initCmd = &cobra.Command{
 	RunE:  runInit,
 }
 
-const starterTemplate = `# mockapi — starter template
-# Run with: mockapi serve api.yaml
+const starterTemplate = `# blackboard — starter template
+# Run with: blackboard serve api.yaml
 
 version: "1"
 info:
@@ -109,6 +109,6 @@ func runInit(cmd *cobra.Command, args []string) error {
 		return err
 	}
 
-	cmd.Printf("  Created %s\n  Run: mockapi serve %s\n", target, target)
+	cmd.Printf("  Created %s\n  Run: blackboard serve %s\n", target, target)
 	return nil
 }

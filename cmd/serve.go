@@ -90,7 +90,7 @@ func printBanner(path string) {
 	if logger.GetFormat() == logger.Silent {
 		return
 	}
-	fmt.Printf("\n  \033[1mmockapi\033[0m  ·  %s\n\n", path)
+	fmt.Printf("\n  \033[1mblackboard\033[0m  ·  %s\n\n", path)
 }
 
 func printWarnings(warnings []string) {
