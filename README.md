@@ -10,12 +10,12 @@ mockapi serve api.yaml
 
 **Linux / macOS** — one-liner, no Go required:
 ```bash
-curl -sSL https://raw.githubusercontent.com/aakash-a-dev/blackboard/main/blackboard-cli/scripts/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/aakash-a-dev/blackboard/main/scripts/install.sh | bash
 ```
 
 **Windows** — run in PowerShell (adds to PATH automatically):
 ```powershell
-irm https://raw.githubusercontent.com/aakash-a-dev/blackboard/main/blackboard-cli/scripts/install.ps1 | iex
+irm https://raw.githubusercontent.com/aakash-a-dev/blackboard/main/scripts/install.ps1 | iex
 ```
 
 **Go toolchain** (any OS):
