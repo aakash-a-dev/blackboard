@@ -14,7 +14,7 @@ var root = &cobra.Command{
 Write a YAML file, run mockapi serve, get a live server.
 No code, no account, no runtime required.
 
-Documentation: https://github.com/mockapi/mockapi`,
+Documentation: https://github.com/aakash-a-dev/blackboard`,
 }
 
 func Execute() {

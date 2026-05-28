@@ -13,10 +13,10 @@ mockapi serve api.yaml
 brew install mockapi
 
 # Go toolchain
-go install github.com/mockapi/mockapi@latest
+go install github.com/aakash-a-dev/blackboard/blackboard-cli@latest
 
 # Direct binary (Linux/macOS)
-curl -sSL https://github.com/mockapi/mockapi/releases/latest/download/install.sh | sh
+curl -sSL https://github.com/aakash-a-dev/blackboard/releases/latest/download/install.sh | sh
 ```
 
 ## Quickstart

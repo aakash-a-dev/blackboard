@@ -6,10 +6,10 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/mockapi/mockapi/internal/config"
-	"github.com/mockapi/mockapi/internal/logger"
-	"github.com/mockapi/mockapi/internal/server"
-	"github.com/mockapi/mockapi/internal/watcher"
+	"github.com/aakash-a-dev/blackboard/blackboard-cli/internal/config"
+	"github.com/aakash-a-dev/blackboard/blackboard-cli/internal/logger"
+	"github.com/aakash-a-dev/blackboard/blackboard-cli/internal/server"
+	"github.com/aakash-a-dev/blackboard/blackboard-cli/internal/watcher"
 	"github.com/spf13/cobra"
 )
 

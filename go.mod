@@ -1,4 +1,4 @@
-module github.com/mockapi/mockapi
+module github.com/aakash-a-dev/blackboard/blackboard-cli
 
 go 1.22
 

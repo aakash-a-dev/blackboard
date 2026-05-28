@@ -10,9 +10,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/mockapi/mockapi/internal/config"
-	"github.com/mockapi/mockapi/internal/faker"
-	"github.com/mockapi/mockapi/internal/logger"
+	"github.com/aakash-a-dev/blackboard/blackboard-cli/internal/config"
+	"github.com/aakash-a-dev/blackboard/blackboard-cli/internal/faker"
+	"github.com/aakash-a-dev/blackboard/blackboard-cli/internal/logger"
 )
 
 // Build returns an http.Handler for a single endpoint.
