@@ -8,16 +8,22 @@ mockapi serve api.yaml
 
 ## Install
 
+**Linux / macOS** — one-liner, no Go required:
 ```bash
-# macOS / Linux
-brew install mockapi
-
-# Go toolchain
-go install github.com/aakash-a-dev/blackboard/blackboard-cli@latest
-
-# Direct binary (Linux/macOS)
-curl -sSL https://github.com/aakash-a-dev/blackboard/releases/latest/download/install.sh | sh
+curl -sSL https://raw.githubusercontent.com/aakash-a-dev/blackboard/main/blackboard-cli/scripts/install.sh | bash
 ```
+
+**Windows** — run in PowerShell (adds to PATH automatically):
+```powershell
+irm https://raw.githubusercontent.com/aakash-a-dev/blackboard/main/blackboard-cli/scripts/install.ps1 | iex
+```
+
+**Go toolchain** (any OS):
+```bash
+go install github.com/aakash-a-dev/blackboard/blackboard-cli@latest
+```
+
+**Manual** — download a pre-built binary from [GitHub Releases](https://github.com/aakash-a-dev/blackboard/releases) and place it anywhere in your `PATH`.
 
 ## Quickstart
 
