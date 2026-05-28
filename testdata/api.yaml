@@ -1,0 +1,78 @@
+# mockapi — golden fixture for integration tests
+version: "1"
+info:
+  title: Test API
+  base_path: /api/v1
+
+endpoints:
+  - path: /users
+    method: GET
+    response:
+      status: 200
+      body:
+        - id: "{{uuid}}"
+          name: "{{fullName}}"
+          email: "{{email}}"
+      count: 3
+
+  - path: /users/:id
+    method: GET
+    response:
+      status: 200
+      body:
+        id: "{{param.id}}"
+        name: "{{fullName}}"
+
+  - path: /users
+    method: POST
+    request:
+      required_fields: [name, email]
+    response:
+      status: 201
+      body:
+        id: "{{uuid}}"
+        message: "created"
+
+  - path: /users/:id
+    method: DELETE
+    response:
+      status: 204
+
+  - path: /flaky
+    method: GET
+    behavior:
+      error_rate: 1.0
+      error_status: 503
+      error_body:
+        message: "always fails"
+    response:
+      status: 200
+      body:
+        ok: true
+
+  - path: /posts
+    method: GET
+    response:
+      status: 200
+      paginated: true
+      body:
+        - id: "{{uuid}}"
+          title: "{{sentence}}"
+      total: 25
+
+  - path: /products
+    method: GET
+    variants:
+      - condition:
+          query:
+            category: "electronics"
+        response:
+          status: 200
+          body:
+            - name: "Laptop"
+              category: "electronics"
+          count: 2
+      - default: true
+        response:
+          status: 200
+          body: []
