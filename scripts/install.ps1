@@ -17,10 +17,13 @@ if (-not $version) {
   exit 1
 }
 
+# goreleaser strips the 'v' prefix from archive filenames ({{ .Version }} = "0.1.1")
+$semver  = $version.TrimStart('v')
+
 Write-Host "Installing blackboard $version (windows/amd64)..."
 
 # ── download ────────────────────────────────────────────────────────────────
-$archive = "blackboard_${version}_windows_amd64.zip"
+$archive = "blackboard_${semver}_windows_amd64.zip"
 $url     = "https://github.com/$Repo/releases/download/$version/$archive"
 $tmp     = Join-Path $env:TEMP "blackboard-install"
 

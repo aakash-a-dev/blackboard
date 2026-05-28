@@ -42,11 +42,14 @@ fi
 
 echo "Installing blackboard ${VERSION} (${OS}/${ARCH})..."
 
+# goreleaser strips the 'v' prefix from archive filenames ({{ .Version }} = "0.1.1")
+SEMVER="${VERSION#v}"
+
 # ── download & extract ─────────────────────────────────────────────────────
 TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
 
-ARCHIVE="${BINARY}_${VERSION}_${OS}_${ARCH}.tar.gz"
+ARCHIVE="${BINARY}_${SEMVER}_${OS}_${ARCH}.tar.gz"
 URL="https://github.com/${REPO}/releases/download/${VERSION}/${ARCHIVE}"
 
 curl -sSfL "$URL" -o "$TMP/$ARCHIVE"
